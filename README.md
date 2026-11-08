@@ -10,7 +10,7 @@ On a local machine: `python3 -m http.server 8080 --directory dist`
 
 Photographs are committed in `dist/assets/`. `ASSET_PROVENANCE.md` lists the photo sources. The editorial/sans `.otf` fonts are optional: the CSS falls back to system fonts if absent.
 
-Deploy targets (all serve `dist/`): `npm start` (Node, honors `$PORT`), `Dockerfile` (nginx, port 8080), `vercel.json`, `netlify.toml`, and `.github/workflows/pages.yml` (GitHub Pages; enable Settings > Pages > Source: GitHub Actions). `npm run build` validates `dist/`.
+Deploy targets (all serve `dist/`): `npm start` (Node, honors `$PORT`), `deploy/Dockerfile` (nginx, port 8080; build with `docker build -f deploy/Dockerfile .`; kept out of the root so Vercel serves the site statically), `vercel.json`, `netlify.toml`, and `.github/workflows/pages.yml` (GitHub Pages; enable Settings > Pages > Source: GitHub Actions). `npm run build` validates `dist/`.
 
 Run `npm run check` for JavaScript syntax checks. `node scripts/verify-motion.mjs` checks that the motion engine runs with finite transforms at representative desktop/mobile scroll positions. This simulated DOM check is not a visual browser test.
 
