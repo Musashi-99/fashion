@@ -1,4 +1,4 @@
-﻿// Zero-dependency static server for dist/. Honors $PORT (Render, Railway, Fly, Heroku, Cloud Run).
+// Zero-dependency static server for dist/. Honors $PORT (Render, Railway, Fly, Heroku, Cloud Run).
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { extname, join, normalize, resolve } from 'node:path';

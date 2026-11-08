@@ -1,4 +1,4 @@
-﻿// Static site: nothing to compile. Validates dist/ so CI/hosts fail fast on a broken deploy.
+// Static site: nothing to compile. Validates dist/ so CI/hosts fail fast on a broken deploy.
 import { access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 const need = ['index.html','styles.css','app.js','motion.js','interactions.js','ornaments.js','denim-art.js','catalog.js','ribbon-geometry.js',
