@@ -8,7 +8,9 @@ Serve `dist/` with any static web server. No dependency installation or build is
 
 On a local machine: `python3 -m http.server 8080 --directory dist`
 
-This repository holds the code only. Photographs and fonts are not committed. Before serving, add them to `dist/assets/`: `black`, `blue`, `gold`, `green`, `ivory`, `lilac`, `pink`, `red` and `weave` as `.webp`, plus `editorial.otf`, `editorial-italic.otf` and `sans.otf`. `ASSET_PROVENANCE.md` lists the photo sources.
+Photographs are committed in `dist/assets/`. `ASSET_PROVENANCE.md` lists the photo sources. The editorial/sans `.otf` fonts are optional: the CSS falls back to system fonts if absent.
+
+Deploy targets (all serve `dist/`): `npm start` (Node, honors `$PORT`), `Dockerfile` (nginx, port 8080), `vercel.json`, `netlify.toml`, and `.github/workflows/pages.yml` (GitHub Pages; enable Settings > Pages > Source: GitHub Actions). `npm run build` validates `dist/`.
 
 Run `npm run check` for JavaScript syntax checks. `node scripts/verify-motion.mjs` checks that the motion engine runs with finite transforms at representative desktop/mobile scroll positions. This simulated DOM check is not a visual browser test.
 

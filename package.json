@@ -1,1 +1,14 @@
-{"name":"vara-studio","version":"1.0.0","private":true,"type":"module","description":"VĀRA Studio cinematic Gen Z fashion storefront concept","scripts":{"check":"node --check dist/app.js && node --check dist/motion.js && node --check dist/interactions.js && node --check dist/ornaments.js && node --check dist/denim-art.js && node --check dist/catalog.js && node --check dist/ribbon-geometry.js"}}
+﻿{
+  "name": "vara-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "VARA Studio cinematic Gen Z fashion storefront concept",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check dist/app.js && node --check dist/motion.js && node --check dist/interactions.js && node --check dist/ornaments.js && node --check dist/denim-art.js && node --check dist/catalog.js && node --check dist/ribbon-geometry.js",
+    "verify": "node scripts/verify-motion.mjs"
+  },
+  "engines": { "node": ">=18" }
+}
